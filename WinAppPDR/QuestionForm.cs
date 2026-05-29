@@ -110,7 +110,11 @@ namespace WinAppPDR
                 btn.FlatAppearance.BorderSize = 0;
                 btn.Click += btnTemp_Click;
                 gpListAnswers.Controls.Add(btn);
+                //щоб при в ході на форму відображалось перше питання
+                //if (i == 0) btn.PerformClick();
             }
+            var btn1 = gpListAnswers.Controls.Find("btnTemp1", true).FirstOrDefault() as Button;
+            btn1?.PerformClick();
         }
 
         private void btnTemp_Click(object sender, EventArgs e)
@@ -222,7 +226,7 @@ namespace WinAppPDR
             if (currentId < 19)
             {
                 var nextBtn = gpListAnswers.Controls.Find("btnTemp" + (currentId + 2), true).FirstOrDefault() as Button;
-                if (nextBtn != null) btnTemp_Click(nextBtn, EventArgs.Empty);
+                if (nextBtn != null) nextBtn.PerformClick();
             }
         }
 
