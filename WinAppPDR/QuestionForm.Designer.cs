@@ -19,6 +19,7 @@
             pnlOptions = new Panel();
             btnSubmit = new Button();
             btnChangeStyles = new Button();
+            btnCreateTest = new Button();
             ((System.ComponentModel.ISupportInitialize)pbImage).BeginInit();
             SuspendLayout();
             // 
@@ -89,6 +90,17 @@
             btnChangeStyles.Text = "Світла тема";
             btnChangeStyles.Click += btnChangeStyles_Click;
             // 
+            // btnCreateTest
+            // 
+            btnCreateTest.FlatAppearance.BorderSize = 0;
+            btnCreateTest.FlatStyle = FlatStyle.Flat;
+            btnCreateTest.Location = new Point(744, 550);
+            btnCreateTest.Name = "btnCreateTest";
+            btnCreateTest.Size = new Size(150, 50);
+            btnCreateTest.TabIndex = 6;
+            btnCreateTest.Text = "Створити тест";
+            btnCreateTest.Click += btnCreateTest_Click;
+            // 
             // QuestionForm
             // 
             ClientSize = new Size(1100, 650);
@@ -98,6 +110,7 @@
             Controls.Add(pnlOptions);
             Controls.Add(btnSubmit);
             Controls.Add(btnSkip);
+            Controls.Add(btnCreateTest);
             Controls.Add(btnChangeStyles);
             Name = "QuestionForm";
             Text = "Офіційні тести з ПДР Україна";
@@ -113,5 +126,6 @@
         private System.Windows.Forms.PictureBox pbImage;
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.Button btnSubmit;
+        private Button btnCreateTest;
     }
 }

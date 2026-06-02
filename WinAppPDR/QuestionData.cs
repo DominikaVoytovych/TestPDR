@@ -1,9 +1,19 @@
-﻿public struct QuestionData
+﻿using System.Collections.Generic;
+
+namespace WinAppPDR
 {
-    public string Text;
-    public string ImagePath;
-    public string[] Options; // Масив варіантів відповідей
-    public int CorrectIndex;  // Індекс правильної відповіді (0, 1 або 2)
-    public Color ButtonColor; // Зберігаємо стан кнопки тут
-    public int? SelectedOption; // Який варіант обрав користувач
+    public class QuestionData
+    {
+        public string Text { get; set; } = "";
+        public string[] Options { get; set; } = new string[0];
+        public int CorrectIndex { get; set; }
+        public string ImagePath { get; set; } = "";
+    }
+
+    // Wraps a full test file saved to /Tests
+    public class TestFile
+    {
+        public string TestName { get; set; } = "Custom Test";
+        public List<QuestionData> Questions { get; set; } = new List<QuestionData>();
+    }
 }
